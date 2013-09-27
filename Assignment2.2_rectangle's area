@@ -5,6 +5,10 @@ by Kapp Craig @ NYU.
 '''
 
 '''
+This program aims to practice 'if-elif-else' structure
+'''
+
+'''
 This program prompt user to input dimensions of
 two different rectangles. Then, it calculates and compares
 the areas 
