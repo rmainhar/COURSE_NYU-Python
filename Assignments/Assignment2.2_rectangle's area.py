@@ -1,7 +1,7 @@
 '''
 This is Part 2 of Assignment 2
 for Introduction to Computer Programming
-by Kapp Craig @ NYU.
+by Craig Kapp @ NYU.
 '''
 
 '''
