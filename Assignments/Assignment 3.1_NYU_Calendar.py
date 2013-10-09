@@ -1,7 +1,7 @@
 '''
 This is Assignment 3 for Introduction to Computer Programming
 by Craig Kapp @ NYU 
-
+'''
 Sep 28
 
 NYU Academic Calendar For Fall 2013
