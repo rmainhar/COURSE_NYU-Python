@@ -19,31 +19,37 @@ Jingxin Zhu
 #             (2) an error (if it failed) or confirmation (String)
 def valid_username(username):
      
-     
-
-     # Contain at least one uppercase character
+     # Mark whether username's length meets the requirement
      flag_length = False
+     # Mark whether username contains at least 1 uppercase character
      flag_upper = False
+     # Mark whether username contains at least 1 lowercase character
      flag_lower = False
+     # Mark whether username contains at least 1 digit
      flag_num = False
+     # Mark whether username contains space
      flag_space = False
 
-     # At least 8 characters
+     # check whether at least 8 characters
      if (len(username)<8):
          flag_length = True
          reason = "username must be greater than 8 characters"
          
      for c in username:
+          # contains uppercase character? 
           if c.isupper():
                flag_upper = True
+          # contains lowercase character?
           if c.lower():
                flag_lower = True
+          # contains digit?
           if c.isdigit():
                flag_num = True
+          # contains space?
           if c.isspace():
                flag_space = True
      
-          
+     # reason for invalid username         
      if (not flag_upper):
           reason = "username must contain at least one uppercase character"
           
@@ -58,9 +64,11 @@ def valid_username(username):
 
      
      flag_username = (not flag_length) and flag_upper and flag_lower and flag_num and(not flag_space)
+
      # If valid, reason is empty
      if(flag_username):
           reason = ""
+          
      return flag_username, reason
 
 
@@ -80,9 +88,6 @@ def valid_username(username):
 #             (2) an error (if it failed) or confirmation (String)
 def valid_password(password, username):
      
-     
-
-     # Contain at least one uppercase character
      f_len = False
      f_cover = False
      f_upper = False
@@ -90,7 +95,7 @@ def valid_password(password, username):
      f_num = False
      f_space = False
 
-     # At least 8 characters
+     # Make sure at least 8 characters
      if (len(username)<8):
          f_len = True
          pw_reason = "password must be greater than 8 characters"
@@ -129,29 +134,3 @@ def valid_password(password, username):
      if(flag_password):
           pw_reason = ""
      return flag_password, pw_reason
-
-
-
-
-
-
-
-
-
-
-
-'''
-
-###   Main Function ####
-username = input("username: ")     
-(flag , reason) = valid_username(username)
-if not(flag):
-     print(reason)
-else:
-     password = input("Password: ")
-     (pwresult, pwreason) = valid_password(password, username)
-     if (not (pwresult)):
-          print(pwreason)
-     else:
-          print("Username and Password combination is valid")
-'''
